@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Presentation Builder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width:100vw;
+    }
+
+    .navbar {
+      width: 80vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #007bff;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar form {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+
+    .navbar label {
+      font-size: 1.2em;
+      margin-right: 10px;
+      color: #333;
+    }
+
+    .navbar input[type="search"] {
+      width: 60%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #007bff;
+      font-size: 1em;
+      margin-right: 10px;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    .navbar input[type="search"]:focus {
+      border-color: #0056b3;
+    }
+
+    .navbar button {
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      font-size: 1em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .navbar button:hover {
+      background-color: #0056b3;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 1vw;
+      padding: 5vw;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      margin-top: 20px;
+    }
+
+    .grid-item {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      font-size: 18px;
+      color: #333;
+      transition: all 0.3s ease;
+    }
+
+    .grid-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .user-name {
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    /* Additional Styles for Grid Items */
+    .grid-item p {
+      margin: 10px 0;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <form id="searchForm">
+      <label for="search">Search:</label>
+      <input type="search" id="search" name="search" placeholder="Type to search..." />
+      <button type="submit">Go</button>
+    </form>
+  </div>
+
+  <div id="app" class="container">
+    <!-- The dynamic user cards will be inserted here -->
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
